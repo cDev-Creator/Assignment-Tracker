@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+body {
+    background-color: rgba(147, 142, 147, 0.738);
+    color: rgba(0, 0, 0, 0.683);
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    padding-left:10px;
+    padding-bottom:10px;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    width: 600px;
+    margin-top: 100px;
+}
+.task-list-title {
+    display: flex;
+    justify-content:center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px 0px;
+    margin-top: 16px;
+    margin-bottom:0px;
+}
+li, .tasklist {
+    padding-top: 15px;
+}
+.lists {
+    display: flex;
+    margin-top: 50px;
+    justify-content: flex-start;
+}
+.all-tasks {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.new-list-container {
+    padding-top: 10px;
+}
+.to-do-list {
+    display: flex;
+    flex-direction: column;
+}
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+}
+.task-count {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    color: rgba(99, 99, 99, 0.91);
+}
+.todo-body {
+    display: flex;
+    flex-direction: column;
+    margin-left:10px;
+    margin-top: 20px;
+}
+.tasks {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+.task-1, .task-2, .task-3 {
+    margin-top: 20px;
+}
+.task-3 {
+    margin-bottom: 20px;
+}
+.new-task-creator {
+    margin-top: 30px;
+}
+.delete {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+    color:rgba(109, 109, 109, 0.772);
+}
+.btn:hover {
+    transition: all .3s ease 0s;
+    scale: 1.1; 
+    color: rgba(132, 132, 132, 0.489);
+}
