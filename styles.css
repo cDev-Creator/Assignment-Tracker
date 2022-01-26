@@ -11,7 +11,6 @@ html {
     /* background: linear-gradient(rgb(82, 151, 255), rgb(109, 100, 209)); */
     background: linear-gradient( rgb(188, 188, 188), rgb(114, 114, 114));
 
-
 }
 body {
    /*  background-color: rgb(169, 169, 169); */
@@ -37,7 +36,7 @@ body {
     border-radius: 30px;
     padding: 20px 0px;
     background-color: var(--header-color);
-    box-shadow: 0px 0px 20px rgb(212, 198, 198);
+    box-shadow: 0px 0px 20px rgb(132, 126, 126);
 }
 
 .task-list-title {
@@ -105,11 +104,9 @@ li:hover {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    margin-left: 150px;
+    margin-left: 50px;
     color:rgba(109, 109, 109, 0.772);
 }
-
-
 
 .todo-body {
     display: flex;
@@ -142,13 +139,13 @@ li:hover {
     margin-top: 20px;
     border: none;
     background-color: transparent;
-    color:rgb(109, 109, 109);
+    color:rgb(97, 97, 97);
 }
 
 .btn:hover {
     transition: all .3s ease 0s;
     transform: scale(1.1);
-    color: rgb(145, 144, 144);
+    color: rgb(120, 120, 120);
 }
 .plus-button {
     font-family: 'IBM Plex Mono', monospace;
@@ -159,7 +156,6 @@ li:hover {
 }
 
 .plus-button:hover {
-    transition: all .3s ease 0s;
     color: rgba(89, 89, 89, 0.683);
 }
 .container input:checked ~ .checkmark {

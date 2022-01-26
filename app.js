@@ -107,7 +107,7 @@ newTaskForm.addEventListener('submit', e => {
     const selectedList = lists.find(list => list.id === selectedListId)
     selectedList.tasks.push(task)
     saveAndRender()
-})
+}) 
 
 function createList(name) {
     // returns object, Date.now().toString() take the date and current tinme and convert them to a string to 
@@ -180,7 +180,7 @@ function taskCount(selectedList) {
     // get every task that is not complete
     const incompleteTasks = selectedList.tasks.filter(task => !task.complete).length
     // if just one task 'task' will be singular, else it will be 'tasks'
-    const taskString = incompleteTasks === 1 ? "task" : "tasks"
+    const taskString = incompleteTasks === 1 ? "assignment" : "assignments"
     listCount.innerText = `${incompleteTasks} ${taskString} remaining`
 }
 
