@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
 
+
+/* @font-face{
+    font-family: "clock";
+    src: url("clock.ttf");
+} */
 :root {
-    --header-color: rgba(200, 185, 185, 0.903); 
+    --main-color: #C8B9B9; 
+    --pomodoro: #bcadad;
+    --shortBreak:#a99c9c;
+    --longBreak: #958e8e;
+
 }
 html {
-    height: 100vh;
-    background: linear-gradient( rgb(188, 188, 188), rgb(114, 114, 114));
+    background: linear-gradient( rgb(188, 188, 188), rgb(114, 114, 114));     height: 100%;
+    width: 100%;
+    height: 120%;
 }
+
 body {
+
    /*  background-color: rgb(169, 169, 169); */
     color: rgba(0, 0, 0, 0.683);
     font-family: 'Zen Kurenaido', sans-serif;
@@ -18,8 +29,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px;
-    margin: 30px;
+    padding: 60px 0px;
+    margin: 30px 0px;
+    padding-top:0px;
     border-radius: 30px;
 }
 
@@ -32,7 +44,7 @@ body {
     font-size: 40px;
     border-radius: 30px;
     padding: 20px 0px;
-    background-color: var(--header-color);
+    background-color: var(--main-color);
     box-shadow: 0px 0px 20px rgb(145, 145, 145);
 }
 
@@ -41,7 +53,7 @@ body {
     justify-content:center;
     max-width: 210px;
     min-width: 180px;
-    background-color: var(--header-color);
+    background-color: var(--main-color);
     border-radius: 25px;
     font-size: 25px;
     padding: 10px 0px;
@@ -76,7 +88,7 @@ li:hover {
 .all-tasks {
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
+    margin-right: 5px;
 }
 
 .task-list {
@@ -91,7 +103,7 @@ li:hover {
 .todo-header {
     display: flex;
     padding: 5px 20px;
-    background-color: var(--header-color);
+    background-color: var(--main-color);
     font-size: 17px;
     gap: 10px;
     border-top-left-radius: 30px;
@@ -188,4 +200,99 @@ input[type=text] {
 
 input[type=text]:focus {
     border: 3px solid rgba(126, 126, 126, 0.91);
+}
+
+.pomodoro {
+    margin: auto;
+    margin-top:60px;
+    width: clamp(400px, 70vw,800px); 
+    height: 250px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    transition: background-color 1s ease;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+  
+
+.timer {
+    align-content: center;
+    padding: 20px;
+    text-align: center;
+}
+  
+.clock {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 8rem;
+    line-height: 1;
+}
+/* 
+.mode-buttons {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+} */
+
+.mode-button {
+    font-size: 1.1rem;
+    font-family: 'Zen Kurenaido', sans-serif;
+    height: 28px;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: 300;
+    color: #fff;
+    border: 1px solid transparent;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 2px 12px;
+    padding-bottom: 30px;
+    background: none;
+}
+
+.mode-buttons {
+    margin-top: 10px;
+}
+
+.mode-button.active {
+    border-color: #fff;
+    border-radius: 20px;
+}
+
+.main-button {
+    cursor: pointer;
+    font-size: 1.7rem;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: 'Zen Kurenaido', sans-serif;
+    color: rgba(0, 0, 0, 0.683);
+    box-shadow: 0px 0px 20px rgb(114, 114, 114);
+    border-radius: 30px;
+    font-weight: bold;
+    width: 150px;
+    background-color: var(--main-color);
+    border-width: initial;
+    border-style: none;
+    margin: 30px 0px 0px;
+    padding: 0px 12px;
+}
+
+.main-button:hover {
+    transition: 1s;
+}
+  
+button:focus, button:active {
+    outline: none;
+}
+  
+.main-button.active {
+    
+    box-shadow: none;
+    outline: none;
+}
+  
+.hidden {
+    display: none;
 }

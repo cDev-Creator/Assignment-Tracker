@@ -56,8 +56,25 @@
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="pomodoro">
+            <div class="timer">
+              <div class="button-group mode-buttons" id="mode-buttons">
+                <button data-mode="pomodoro" class="button active mode-button" id="pomodoro"> Pomodoro</button>
+                <button data-mode="shortBreak" class="button mode-button" id="short-break"> Short break</button>
+                <button data-mode="longBreak" class="button mode-button" id="long-break"> Long break</button>
+              </div>
+              <div class="clock" id="clock">
+                <!-- to remove white space created by span -->
+                <span id="minutes">20</span><!--
+            --><span class="separator">:</span><!--
+            --><span id="seconds">00</span>
+              </div>
+              <button class="main-button" data-action="start" id="main-btn">Start</button>
+            </div>
+        </div>
+
+    </div>
     <template id ="task-template">
         <div class="task">
             <input type="checkbox">
@@ -65,7 +82,14 @@
         </div>
     </template>
 
+    <div class="hidden">
+        <audio src="notification2.wav" data-sound="pomodoro"></audio>
+        <audio src="notification1.wav" data-sound="shortBreak"></audio>
+        <audio src="notification1.wav" data-sound="longBreak"></audio>
+    </div>
+
 </body>
 
 <script defer src= "app.js"></script>
+<script src = "pomodoro.js"></script>
 </html>

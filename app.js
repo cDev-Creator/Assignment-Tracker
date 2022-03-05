@@ -101,9 +101,7 @@ newTaskForm.addEventListener('submit', e => {
     const taskName = newTaskInput.value
     if (taskName == null || taskName === '') return
     const task = createTask(taskName)
-    
     newTaskInput.value = null
-
     const selectedList = lists.find(list => list.id === selectedListId)
     selectedList.tasks.push(task)
     saveAndRender()
