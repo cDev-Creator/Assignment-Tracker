@@ -3,9 +3,9 @@ const modeButtons = document.querySelector('#mode-buttons')
 const buttonSound = new Audio('button-sound.mp3');
 
 const timer = {
-    pomodoro:.1,
-    shortBreak: .1,
-    longBreak: .10,
+    pomodoro: 20,
+    shortBreak: 1,
+    longBreak: 5,
     longBreakInterval: 6,
     sessions: 0,
 };
