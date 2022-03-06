@@ -3,9 +3,9 @@ const modeButtons = document.querySelector('#mode-buttons')
 const buttonSound = new Audio('button-sound.mp3');
 
 const timer = {
-    pomodoro: 20,
-    shortBreak: 1,
-    longBreak: 10,
+    pomodoro:.1,
+    shortBreak: .1,
+    longBreak: .10,
     longBreakInterval: 6,
     sessions: 0,
 };
@@ -96,6 +96,11 @@ function startTimer() {
             default:
               switchMode('pomodoro');
            }
+
+           if (Notification.permission === 'granted') {
+            const text = timer.mode === 'pomodoro' ? 'Gotta start working!' : 'You earned a break!';
+            new Notification(text);
+          }
            document.querySelector(`[data-sound="${timer.mode}"]`).play();
 
            startTimer();
@@ -128,3 +133,24 @@ function updateClock() {
     const text = timer.mode === 'pomodoro' ? 'Gotta start working!' : 'You earned a break!';
     document.title = `${minutes}:${seconds} — ${text}`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // check if the browser supports notifications
+    if ('Notification' in window) {
+      // if notification permissions have neither been granted or denied
+      if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+        // ask the user for permission
+        Notification.requestPermission().then(function(permission) {
+          // if permission is granted
+          if (permission === 'granted') {
+            // create a new notification
+            new Notification(
+              'You will recieve a notification at the start of each session'
+            );
+          }
+        });
+      }
+    }
+  
+    switchMode('pomodoro');
+});
